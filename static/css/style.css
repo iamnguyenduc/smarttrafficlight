@@ -1,0 +1,98 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    position: relative;
+    width: 1920px;
+    height: 936px;
+}
+
+.background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.lane {
+    position: absolute;
+    width: 100px;
+    height: 50px;
+    background-color: rgba(255, 0, 0, 0.5);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+}
+
+/* Vị trí của các ô đếm xe */
+#lane_1 {
+    top: 60%;
+    left: 5%;
+}
+
+#lane_2 {
+    top: 82%;
+    left: 54%;
+}
+
+#lane_3 {
+    top: 55%;
+    left: 85%;
+}
+
+#lane_4 {
+    top: 40%;
+    left: 43%;
+}
+
+/* Hiển thị đồng hồ */
+.time {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Style cho nút điều khiển */
+.control-buttons {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.control-buttons button {
+    padding: 12px 20px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.control-buttons button:hover {
+    background-color: #2980b9;
+}

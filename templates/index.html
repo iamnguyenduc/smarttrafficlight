@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vehicle Count Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</head>
+<body>
+    <div class="container">
+        <img src="{{ url_for('static', filename='images/bg.png') }}" alt="background" class="background">
+
+        <!-- Thời gian hiển thị ở góc trên cùng bên trái -->
+        <div class="time" id="time_display">Loading time...</div>
+
+        <!-- Các ô đếm xe -->
+        <div class="lane" id="lane_1">Lane 1: <span id="count1">0</span></div>
+        <div class="lane" id="lane_2">Lane 2: <span id="count2">0</span></div>
+        <div class="lane" id="lane_3">Lane 3: <span id="count3">0</span></div>
+        <div class="lane" id="lane_4">Lane 4: <span id="count4">0</span></div>
+
+        <!-- Các nút điều khiển ESP32 -->
+        <div class="control-buttons">
+            <button onclick="sendCommand('PRIORITY_13')">🟢 Ưu tiên Lane 13</button>
+            <button onclick="sendCommand('PRIORITY_24')">🔵 Ưu tiên Lane 24</button>
+            <button onclick="sendCommand('RESET')">🔁 Reset về AI</button>
+            <button onclick="sendCommand('YELLOW_MODE')">🟡 Chế độ đèn vàng</button>
+        </div>
+    </div>
+</body>
+</html>
